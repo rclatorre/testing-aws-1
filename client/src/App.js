@@ -6,7 +6,7 @@ import React from 'react'
 function App() {
   const [respuesta, setRespuesta] = React.useState()
 
-  axios.get('http://localhost:4000/')
+  axios.get('http://api.wiracocha.click/')
   .then( resp => {
     const data = resp.data
     setRespuesta(data)
