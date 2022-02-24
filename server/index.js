@@ -21,6 +21,9 @@ app.get('/', (req, res) => {
     res.send(salida)
 })
 
+
+app.set('port', 4000)
+
 server.listen(4000, () => {
     console.log('Escuchando en el puerto 4000')
 })
