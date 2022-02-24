@@ -1,0 +1,10 @@
+{ 
+    "apps": [{
+           "name": "ServerWiracocha",
+           "script": "./index.js",
+           "log_file": "/var/log/pm2/ServerWiracocha.log",
+           "error_file": "/var/log/pm2/ServerWiracocha-err.log",
+           "watch": true,
+           "ignore_watch" : [ "./log", "./node_modules","./.git", "./sessions","./sessions/*", "./private/files/**/*", "./private/imgs/**/*" ]
+            }]
+   }
