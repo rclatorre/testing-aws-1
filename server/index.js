@@ -7,8 +7,8 @@ const http = require('https')
 const fs = require('fs')
 
 var options = {
-    key: fs.readFileSync(process.env.serverOptionsKey),
-    cert: fs.readFileSync(process.env.serverOptionsCert) 
+    key: fs.readFileSync(process.env.ServerOptionsKey),
+    cert: fs.readFileSync(process.env.ServerOptionsCert) 
 }
 
 let server = http.createServer(options, app)
