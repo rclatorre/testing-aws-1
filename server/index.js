@@ -3,12 +3,12 @@ const app = express()
 const cors = require('cors')
 
 require('./config/config')
-const http = require('https')
+const http = require('http')
 const fs = require('fs')
 
 var options = {
-    key: fs.readFileSync(process.env.ServerOptionsKey),
-    cert: fs.readFileSync(process.env.ServerOptionsCert) 
+    // key: fs.readFileSync(process.env.ServerOptionsKey),
+    // cert: fs.readFileSync(process.env.ServerOptionsCert) 
 }
 
 let server = http.createServer(options, app)
