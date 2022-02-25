@@ -13,7 +13,7 @@ var options = {
 
 let server = http.createServer(options, app)
 
-app.use(cors({origin: 'https://wiracocha.click', optionsSuccessStatus: 200}))
+app.use(cors({origin: false, optionsSuccessStatus: 200}))
 
 app.get('/', (req, res) => {
     let salida = 'Respuesta del Backend'
