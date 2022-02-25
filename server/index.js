@@ -8,12 +8,13 @@ const fs = require('fs')
 
 var options = {
     key: fs.readFileSync(process.env.ServerOptionsKey),
-    cert: fs.readFileSync(process.env.ServerOptionsCert) 
+    cert: fs.readFileSync(process.env.ServerOptionsCert),
+    requestCert: true 
 }
 
 let server = http.createServer(options, app)
 
-app.use(cors({origin: false, optionsSuccessStatus: 200}))
+app.use(cors({optionsSuccessStatus: 200}))
 
 app.get('/', (req, res) => {
     let salida = 'Respuesta del Backend'
