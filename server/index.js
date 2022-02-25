@@ -8,8 +8,7 @@ const fs = require('fs')
 
 var options = {
     key: fs.readFileSync(process.env.ServerOptionsKey),
-    cert: fs.readFileSync(process.env.ServerOptionsCert),
-    requestCert: true 
+    cert: fs.readFileSync(process.env.ServerOptionsCert)
 }
 
 let server = http.createServer(options, app)
